@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contest Demo</title>
+    <link rel="stylesheet" href="./hero.css">
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./about.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+   
+    <nav>
+      <div class="logo">
+        <p><span style="font-family: serif;">D</span>rift <span style="font-family: serif;">S</span>tudio</p>
+      </div>
+
+      <div class="nav-items" style="font-family: serif;">
+        <p >Product</p>
+        <p>Concept</p>
+        <p>Partners</p>
+        <button>Try now</button>
+      </div>
+      
+      <!-- Hamburger Menu for Mobile -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <p>Product</p>
+        <p>Concept</p>
+        <p>Partners</p>
+        <button>Try now</button>
+      </div>
+    </nav>
+
+  
+       <section class="hero-section">
+     
+      </section>
+
+
+      <div class="about">
+        <div class="scroll-indicator">Scroll Progress: 0%</div>
+        
+        <section class="about-header">
+            <h1>Creative Design Studio</h1>
+            <p>We are a collective of designers, thinkers, and makers dedicated to crafting meaningful experiences through thoughtful design.</p>
+            <h1>Fluid - Online || Offline Presence</h1>
+        </section>
+    
+        <section class="expanding-image-section">
+            <div class="expanding-image-container">
+                <img class="expanding-image" src="./public/hero.png" alt="Design Studio Team">
+            </div>
+        </section>
+    
+        <section class="content-section">
+            <div class="image-side">
+                <img src="./public/office.avif" alt="Our Process">
+            </div>
+            <div class="text-side">
+                <h2>Our Story</h2>
+                <p>Founded in 2018, our studio emerged from a shared vision to create designs that matter. We believe in the power of thoughtful aesthetics combined with strategic thinking to solve complex problems.</p>
+                <p>Our collaborative approach brings together diverse perspectives, allowing us to create work that resonates on multiple levels. From brand identity to digital experiences, we craft solutions that are both beautiful and functional.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number" style="font-family: serif;">47</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" style="font-family: serif;">12</div>
+                        <div class="stat-label">Team members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" style="font-family: serif;">6</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       </div>
+
+    <section class="intro">
+      <h1>
+        Where organic concepts meets serenity, creating timeless
+        sanctuaries awarding mindful products that embrace blah blah.
+      </h1>
+    </section>
+
+    <section class="sticky-slider">
+      <div class="slide-images">
+        <div class="img" id="img-1">
+          <img src="./public/one.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="slide-info">
+        <div class="slide-title-prefix">
+          <p>3D Render</p>
+        </div>
+
+        <div class="slide-title">
+          <p id="title-text">Branding Project</p>
+        </div>
+
+        <div class="slide-link">
+          <a href="#">Explore &#8599;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="outro">
+      <h1>
+        Transform your vision into reality with us.We are a creative agency built on flow, depth, and bold ideas.
+        Like water, our work moves seamlessly across digital landscapes — <span>shaping brands, experiences, and stories that connect.</span>
+      </h1>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+   
+    <script src="./hero.js" type="module"></script>
+    <script src="./shaders.js" type="module"></script>
+    <script src="./script.js" type="module"></script>
+    <script src="./about.js" type="module"></script>
+    <script type="module" src="/about.js"></script>
+  </body>
+</html>
