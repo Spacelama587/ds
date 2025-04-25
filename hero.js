@@ -5,6 +5,7 @@ import {
     renderFragmentShader,
   } from "./shaders.js";
   
+  
   document.addEventListener("DOMContentLoaded", () => {
     // Create a container for the canvas with specific dimensions
     const canvasContainer = document.createElement('div');
