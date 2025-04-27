@@ -384,16 +384,35 @@ cubeGroup.add(cube);
 
 // Create wireframe for edges
 const wireframe = new THREE.LineSegments(
-  new THREE.EdgesGeometry(geometry, 10), // Lower threshold for more visible edges
+  new THREE.EdgesGeometry(geometry, 5), // Lower threshold value for more edges
   new THREE.LineBasicMaterial({
-    color: 0x4488ff,
-    linewidth: 1.5,
+    color: 0x6699ff, // Brighter blue color
+    linewidth: 2, // Thicker lines
     transparent: true,
-    opacity: 0.1
+    opacity: 0.3, // Higher opacity
+    blending: THREE.AdditiveBlending // Add this for glow effect
   })
 );
-wireframe.scale.setScalar(1.001); // Slightly larger to prevent z-fighting
+wireframe.scale.setScalar(1.002); // Slightly larger to prevent z-fighting and be more visible
 cubeGroup.add(wireframe);
+
+const glowWireframe = new THREE.LineSegments(
+  new THREE.EdgesGeometry(geometry, 10),
+  new THREE.LineBasicMaterial({
+    color: 0x3366ff, 
+    transparent: true,
+    opacity: 0.15,
+    blending: THREE.AdditiveBlending
+  })
+);
+glowWireframe.scale.setScalar(1.005); // Slightly larger than the first wireframe
+cubeGroup.add(glowWireframe);
+
+// Add a subtle glow light that follows the cube
+const glowLight = new THREE.PointLight(0x3366ff, 1.0, 5);
+glowLight.position.set(0, 0, 0);
+cubeGroup.add(glowLight); // Attach to cube group so it moves with the cube
+
 
 // Helper function for smooth interpolation
 function lerp(start, end, amt) {
